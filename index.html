@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hey Nikko Chen, will you be my Valentine? <span class="heart">❤️</span></h1>
+        <div class="buttons">
+            <button class="btn yes-btn" onclick="goToPlan()">Yes</button>
+            <button class="btn no-btn" id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script>
+        function goToPlan() {
+            window.location.href = "plan.html";  // Redirects to plan page
+        }
+
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            this.style.top = Math.random() * 80 + "vh";
+            this.style.left = Math.random() * 80 + "vw";
+        });
+    </script>
+
+</body>
+</html>

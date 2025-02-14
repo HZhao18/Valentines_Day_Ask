@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Date Plan 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script> <!-- Confetti library -->
+</head>
+<body onload="celebrate()">
+
+    <div class="container">
+        <h1>🎉 Yay! We're Going on a Valentine's Date! ❤️</h1>
+        <p>Here’s our special plan:</p>
+        <ul>
+            <li>🚗 3:00PM: Pick you up from work.</li>
+            <li>🍜4:00PM: Head over to New Jersey for a quick snack.</li>
+            <li>💆🏻‍♀️🧖🏻‍♀️✨🌿6:00PM: Sojo Spa</li>
+            <li>🍖♨️🔥🥩🥓9:00PM: Antoya </li>
+        </ul>
+        <p>Looking forward to a lovely time with you! 💖</p>
+    </div>
+
+    <script>
+        function celebrate() {
+            var duration = 3 * 1000; // 3 seconds
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+    </script>
+
+</body>
+</html>

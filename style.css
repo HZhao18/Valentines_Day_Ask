@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffb6c1;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #d63384;
+}
+
+.heart {
+    font-size: 3rem;
+    animation: heartbeat 1s infinite;
+    color: red;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.yes-btn {
+    background: #ff4d79;
+    color: white;
+}
+
+.yes-btn:hover {
+    background: #ff1a57;
+}
+
+.no-btn {
+    background: #ffcccc;
+    color: black;
+    position: absolute;
+}
+
+.no-btn:hover {
+    position: absolute;
+    top: calc(20% + (Math.random() * 50px));
+    left: calc(20% + (Math.random() * 50px));
+}
